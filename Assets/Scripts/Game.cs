@@ -6,11 +6,10 @@ public class Game : MonoBehaviour
 {
     void Start()
     {
-        Debug.Log("Hello World!");
-    }
+        string str = "Happy";
+        int num = 123;
+        string message = str + num;
 
-    void Update()
-    {
-        
+        Debug.Log(message);
     }
 }
