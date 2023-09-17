@@ -17,15 +17,6 @@ public class CircleFormation : MonoBehaviour
             float angle = i * Mathf.PI * 2 / numCubes;
             Vector3 pos = new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)) * radius;
             GameObject cube = Instantiate(cubePrefab, pos, Quaternion.identity);
-            cube.transform.LookAt(transform.position);
-        }
-
-        // 원 모양으로 배치된 큐브 오브젝트들을 그룹으로 묶음
-        GameObject cubeGroup = new GameObject("CubeGroup");
-        cubeGroup.transform.position = transform.position;
-        foreach (Transform child in transform)
-        {
-            child.SetParent(cubeGroup.transform);
         }
     }
 
